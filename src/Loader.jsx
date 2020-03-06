@@ -14,7 +14,7 @@ class Loader extends React.Component {
     return (
       <div className="sweet-loading">
         <RingLoader
-          size={300}
+          size={250}
           color={"#123abc"}
           loading={this.state.loading}
         />
