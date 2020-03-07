@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+function padToTwo(number) {
+  if (number<=99) { number = ("0"+number).slice(-2); }
+  return number;
+}
+
 export default class Countdown extends Component {
   constructor(props) {
     super(props);
@@ -29,10 +34,10 @@ export default class Countdown extends Component {
   render() {
     const {duration} = this.state;
 
-    let days = duration.days();
-    let hours = duration.hours();
-    let minutes = duration.minutes();
-    let seconds = duration.seconds();
+    let days = padToTwo(duration.days());
+    let hours = padToTwo(duration.hours());
+    let minutes = padToTwo(duration.minutes());
+    let seconds = padToTwo(duration.seconds());
 
     return (
       <div className="countdown">

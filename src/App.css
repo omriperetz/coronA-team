@@ -49,10 +49,10 @@ body, html, #root, .App {
 }
 
 .main .sweet-loading {
-  display: block;
   position: absolute;
   top: -10px;
   left: calc(50% - 135px);
+  z-index: 9999;
 }
 
 .main .sweet-loading > div > div {
@@ -76,9 +76,7 @@ body, html, #root, .App {
 
 .corona-virus-logo {
   width: 250px;
-  display: block;
-  margin-left: calc(50% - 125px);
-  
+
   -webkit-animation-name: spin;
   -webkit-animation-duration: 10000ms;
   -webkit-animation-iteration-count: infinite;
